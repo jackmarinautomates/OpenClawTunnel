@@ -1,24 +1,36 @@
 # OpenClawTunnel
 
-## Quick Install
+## Prerequisites
+- macOS 12.0+
+- Xcode Command Line Tools
+- SSH key configured for 178.156.134.97
 
+## Quick Installation
+
+1. Install Xcode Command Line Tools:
+```bash
+xcode-select --install
+```
+
+2. Generate SSH Key (if not exists):
+```bash
+ssh-keygen -t ed25519
+```
+
+3. Install OpenClawTunnel:
 ```bash
 git clone https://github.com/jackmarinautomates/OpenClawTunnel
 cd OpenClawTunnel
+chmod +x install.sh
 ./install.sh
 ```
 
-## Requirements
-- macOS
-- SSH key configured for remote access
-
 ## Usage
-1. Install via terminal commands
-2. Open from Applications folder
-3. Tunnel automatically establishes to OpenClaw gateway
+1. Open from Applications folder
+2. Tunnel automatically establishes to OpenClaw gateway
+3. Click "Open Web UI" to access
 
-## Security
-- Localhost-only tunnel
-- Strict SSH host key checking
-- No persistent key storage
-- Uses system SSH configuration
+## Troubleshooting
+- Ensure SSH key is added to remote host
+- Check SSH connectivity: 
+  `ssh -p 4956 jack@178.156.134.97`
