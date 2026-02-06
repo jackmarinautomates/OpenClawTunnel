@@ -1,1 +1,15 @@
+# macOS system files
+.DS_Store
+*.swp
+*.swo
 
+# Xcode
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Build products
+build/
+DerivedData/
+*.app
+*.dSYM.zip
